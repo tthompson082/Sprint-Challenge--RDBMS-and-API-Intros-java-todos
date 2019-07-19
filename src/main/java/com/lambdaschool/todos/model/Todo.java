@@ -18,7 +18,7 @@ public class Todo
 
     private Date datestarted;
 
-    private boolean completed;
+    private boolean completed = false;
 
     @ManyToOne
     @JoinColumn(name = "userid")
@@ -29,11 +29,10 @@ public class Todo
     {
     }
 
-    public Todo(String description, Date datestarted, boolean completed, User user)
+    public Todo(String description, Date datestarted, User user)
     {
         this.description = description;
         this.datestarted = datestarted;
-        this.completed = completed;
         this.user = user;
     }
 
