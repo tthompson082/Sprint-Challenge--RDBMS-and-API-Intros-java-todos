@@ -98,6 +98,16 @@ public class User extends Auditable
     }
 
 
+    public List<Todo> getUserTodos()
+    {
+        return userTodos;
+    }
+
+    public void setUserTodos(List<Todo> userTodos)
+    {
+        this.userTodos = userTodos;
+    }
+
     public List<SimpleGrantedAuthority> getAuthority()
     {
         List<SimpleGrantedAuthority> rtnList = new ArrayList<>();
@@ -108,5 +118,7 @@ public class User extends Auditable
             rtnList.add(new SimpleGrantedAuthority(myRole));
         }
         return rtnList;
+
+
     }
 }
