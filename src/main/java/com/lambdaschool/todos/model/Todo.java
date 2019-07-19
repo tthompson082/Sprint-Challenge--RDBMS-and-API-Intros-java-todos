@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "todo")
-public class Todo
+public class Todo extends Auditable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
